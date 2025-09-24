@@ -364,27 +364,28 @@
   })();
 </script>
 
-ิ<br>
-
-<!-- วิดีโอพื้นหลัง -->
-<!-- วิดีโอในกรอบเล็ก -->
+<!-- วิดีโอตรงกลางบนเค้ก -->
 <video id="mini-video" autoplay muted loop playsinline>
   <source src="6ffe4d47-ec18-4763-894b-1bd7594efd7f.mp4" type="video/mp4">
 </video>
 
 <style>
+  /* จัดวิดีโอให้อยู่ตรงกลางด้านบน */
   #mini-video {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 220px;
-    height: 150px;
+    position: absolute;
+    top: 1px; /* ระยะห่างจากขอบบน */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 180px;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     z-index: 50;
   }
 
+ 
+  /* confetti */
   #confetti-canvas {
     position: fixed;
     top: 0;
